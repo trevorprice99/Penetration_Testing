@@ -3,5 +3,5 @@
 ## Usage Instructions: Provides command-line syntax and usage examples.
 - ./quick_xfreerdp.sh
 - Enter the IP, username, password
-## Dependencies: Lists required Python packages and modules, if any.
+## Dependencies: Lists required packages and modules, if any.
 - xfreerdp
