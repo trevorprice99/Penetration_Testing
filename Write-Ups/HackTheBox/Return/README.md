@@ -68,12 +68,12 @@ nc -nvv -w 1 $IP 1-1000 2>&1 | grep -v 'Connection refused'
 	- nmap --script smb-vuln* -p135,139,445 $IP
 - 80
 	- Default landing page
-		- ![alt text](https://github.com/trevorprice99/Penetration_Testing/blob/main/Write-Ups/HackTheBox/Return/Images/Return01.PNG)
+		- ![alt text](https://github.com/trevorprice99/Penetration_Testing/blob/main/Write-Ups/HackTheBox/Return/Images/Return01.png)
 	- Versions
 	- Directory Brute force
 		- dirsearch -u http://$IP
 			- /settings.php
-				- ![alt text](https://github.com/trevorprice99/Penetration_Testing/blob/main/Write-Ups/HackTheBox/Return/Images/Return02.PNG)
+				- ![alt text](https://github.com/trevorprice99/Penetration_Testing/blob/main/Write-Ups/HackTheBox/Return/Images/Return02.png)
 				- Change IP to A_IP
 				- nc -lvnp 389
 				- Run update
